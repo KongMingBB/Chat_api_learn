@@ -9,4 +9,4 @@ def root():
     return {"message": "FastAPI 项目启动成功"}
 @app.get('/health', response_model=HealthResponse)
 async def health_check()-> HealthResponse:
-    return HealthResponse(status="OK", message="Product API is running")
+    return HealthResponse(status="ok", message="Product API is running")
