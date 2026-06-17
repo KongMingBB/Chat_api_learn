@@ -15,7 +15,7 @@ class ProductCreate(ProductBase):
 class ProductUpdate(BaseModel):
     name:str |None= Field(min_length=1 ,max_length=100)
     description:str | None=None
-    price:Decimal |Field(default=None,gt=0)
+    price:Decimal |None=Field(default=None,gt=0)
     stock:int |None=Field(default=None,ge=0)
     is_active:bool | None=Field(default=None)
 class ProductResponse(ProductBase):
